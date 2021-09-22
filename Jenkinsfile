@@ -6,25 +6,25 @@ pipeline{
     tools{
        nodejs 'nodejs' 
     }
-  
+    
 
     stages{
-        stage(‘build-the-app’){
+        stage('build'){
             steps{
                 echo 'this is the build job'
-                sh ’npm install’
+                sh 'npm install'
             }
         }
-        stage('test-the-app’){
+        stage('test'){
             steps{
                 echo 'this is the test job'
-                sh ’nam test’            
+                sh 'npm test'
             }
         }
-        stage(‘package-the-app’){
+        stage('package'){
             steps{
                 echo 'this is the package job'
-                sh ’npm run package’
+                sh 'npm run package'
             }
         }
     }
@@ -37,4 +37,3 @@ pipeline{
     }
     
 }
-
